@@ -30,6 +30,7 @@
     width: 20%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .item{
@@ -97,10 +98,15 @@
 
 .top{
     rotate: 135deg;
+    position: absolute;
+    left: 44%;
 }
 
 .bottom{
     rotate: 315deg;
+    position: absolute;
+    left: 44%;
+    bottom: 0px;
 }
 
 .button{

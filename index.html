@@ -21,16 +21,16 @@
             </div>
             <div class="cards-box">
                 <div class="card" v-for="(item, index) in items" :class="currentImage == index ? 'active': '' ">
-                    <img :src="items[index]" :alt="title[index]">
+                    <img :src="items[index]" :alt="title[index]" @click="click1(index)">
                 </div>
-                <div class="arrows-box">
+                
                     <div class="top arrow">
                         <button class="button" id="btn1" @click="arrowUp">&angrt;</button>
                     </div>
                     <div class="bottom arrow">
                         <button class="button" id="btn2" @click="arrowDown">&angrt;</button>
                     </div>
-                </div>
+                
             </div>
         </div>
     </div>

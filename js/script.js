@@ -42,6 +42,9 @@ const app = new Vue(
                     this.currentImage++;
                 }
             },
+            click1 : function (index) {
+                this.currentImage = index;
+            }
         },
     }
 );
