@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="root" class="container">
+        <div class="container-slider">
+            <div class="slider">
+                <div class="item active">
+                    <img :src="items[currentImage]" :alt="title[currentImage]">
+                </div>
+                <div class="title active">
+                    <h1>{{title[currentImage]}}</h1>
+                    <h2>{{text[currentImage]}}</h2>
+                </div>
+            </div>
+            <div class="cards-box">
+                <div class="card" v-for="(item, index) in items" :class="currentImage == index ? 'active': '' ">
+                    <img :src="items[index]" :alt="title[index]">
+                </div>
+                <div class="arrows-box">
+                    <div class="top arrow">
+                        <button class="button" id="btn1" @click="arrowUp">&angrt;</button>
+                    </div>
+                    <div class="bottom arrow">
+                        <button class="button" id="btn2" @click="arrowDown">&angrt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
