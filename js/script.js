@@ -5,6 +5,7 @@ const app = new Vue(
         el: "#root",
         data: {
             currentImage : 0,
+            status : 0,
             items : [
                 'img/01.jpg',
                 'img/02.jpg',
@@ -44,7 +45,18 @@ const app = new Vue(
             },
             click1 : function (index) {
                 this.currentImage = index;
-            }
+            },
+            timer: function () {
+                this.status = setInterval(this.arrowDown, 3000);
+            },
+            timeout: function () {
+                clearInterval(this.status);
+            },
+        },
+        mounted() {
+            this.timer()
+            
+            
         },
     }
 );

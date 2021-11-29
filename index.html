@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="root" class="container">
-        <div class="container-slider">
+        <div class="container-slider"  @mouseover="timeout" @mouseleave="timer">
             <div class="slider">
                 <div class="item active">
                     <img :src="items[currentImage]" :alt="title[currentImage]">
